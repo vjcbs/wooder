@@ -1,0 +1,21 @@
+.more-link {
+  @include reset-link;
+  position: relative;
+
+  &::after {
+    @include short-dash;
+    border-width: 1px;
+    width: 35px;
+    left: 0;
+    top: 17px;
+  }
+}
+
+.more-link__icon {
+  display: inline-block;
+  width: 34px;
+  height: 11px;
+  margin-left: 5px;
+  background: url("../img/ic-arrow.png") no-repeat;
+  background-color: #acacac;
+}

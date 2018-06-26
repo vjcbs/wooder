@@ -14,6 +14,7 @@
 </head>
 <body>
   <header class="header">
+    <span class="header__menu-toggle hidden"></span>
     <div class="header__menu">
       <div class="header__logo">
         Wooder
@@ -32,25 +33,26 @@
         </ul>
       </nav>
       <div class="header__info-lang">
-        <div class="header__info-btn">
-          Info
-        </div>
-        <div class="header__info-lang">
-          <ul class=header__lang-list>
-            <li class="header__lang-item">
-              En
-            </li>
-            <li class="header__lang-item">
-              Ru
-            </li>
-          </ul>
-        </div>
+        <span class="header__info-btn">
+
+        </span>
+        <ul class=header__lang-list>
+          <li class="header__lang-item">
+            En
+          </li>
+          <li class="header__lang-item">
+            Ru
+          </li>
+        </ul>
       </div>
     </div>
 
     <div class="header__jumbo">
       <h1 class="header__title">Wooder</h1>
-      <a class="header__link">Learn more</a>
+      <a class="button header__link">
+        <span class="button__caption">Learn more</span>
+        <span class="button__icon"></span>
+      </a>
       <div class="header__scroll">
         <span class="header__scroll-span">Scroll</span>
       </div>
@@ -61,47 +63,36 @@
     <ul class="products__list">
       <li class="products__item">
         <div class="products__description">
-          <div class="products__title-wrapper">
-            <span class="long-dash"></span>
-            <h3 class="products__title">Furniture</h3>
-          </div>
-          <div class="products__text-wrapper">
-            <span class="dash"></span>
-            <p class="products__text">
-
-            </p>
-          </div>
-          <a class="products__link">Learn more</a>
-          <span class="number">01.</span>
+          <h3 class="products__title">Furniture</h3>
+          <p class="products__text">
+            Wooder utilizes materials otherwise left behind, rendered useless
+            in their original intent. By creating new pieces made of reclaimed barnwood.
+          </p>
+          <a class="more-link products__link">Learn more<span class="more-link__icon products__link-icon"></span></a>
+          <span class="products__number">01<span class="woody">.</span></span>
         </div>
-        <div class="prodcuts__img-wrapper">
-          IMG
+        <div class="products__img-wrapper">
+          <img class="products__img" src="img/img-furniture.jpg" />
         </div>
       </li>
       <li class="products__item">
         <div class="products__description">
-          <div class="products__title-wrapper">
-            <span class="long-dash"></span>
             <h3 class="products__title">Decor</h3>
-          </div>
-          <div class="products__text-wrapper">
-            <span class="dash"></span>
             <p class="products__text">
-
+              We make all types of wooden decor as per design given by Architect,
+              Interior designer, contractor which is suitable your premises.
             </p>
-          </div>
-          <a class="products__link">Learn more</a>
-          <span class="number">02.</span>
+            <a class="more-link products__link">Learn more<span class="more-link__icon products__link-icon"></span></a>
+            <span class="products__number">02<span class="woody">.</span></span>
         </div>
         <div class="prodcuts__img-wrapper">
-          IMG
+          <img class="products__img" src="img/img-decor.jpg" />
         </div>
       </li>
     </ul>
 
     <div class="products__info">
       <h2 class="products__info-subtitle">Wooder - is quality</h2>
-      <span class="dash"></span>
       <p class="products__info-text">
         We create unique design objects made of rare wood, specially under th order.
         Look at the short video about our work.
@@ -111,21 +102,18 @@
           <div class="products__info-vid">
 
           </div>
-          <span class="dash"></span>
           <span class="products__vid-title">Innovative Design</span>
         </li>
         <li class="products__info-item">
           <div class="products__info-vid">
 
           </div>
-          <span class="dash"></span>
           <span class="products__vid-title">High-level Skills</span>
         </li>
         <li class="products__info-item">
           <div class="products__info-vid">
 
           </div>
-          <span class="dash"></span>
           <span class="products__vid-title">Quality products</span>
         </li>
       </ul>
@@ -136,25 +124,19 @@
     <div class="video__wrapper">
       <div class="video__content-wrapper">
         <div class="video__desc-wrapper">
-          <div class="video__title-wrapper">
-            <span class="long-dash"></span>
-            <h3 class="video__title">We do a design of any complexity</h3>
-          </div>
-          <div class="video__text-wrapper">
-            <span class="dash"></span>
-            <div class="video__text">
-
-            </div>
-          </div>
-          <button class="video__watch-btn">
+          <h3 class="video__title">We do a design of any complexity</h3>
+          <p class="video__text">
+              This is a team of professionals that set a highest standard
+              in the furniture making and wood decor.
+              Creating modern designs and adhering to the top quality. And we area
+              doing work with love.
+          </p>
+          <button class="button video__watch-btn">
             <div class="video__watch-icon">
 
             </div>
             <span class="video__watch-span">Watch video</span>
           </button>
-        </div>
-        <div class="video__dash">
-
         </div>
       </div>
     </div>
@@ -163,37 +145,28 @@
   <section class="about">
     <div class="about__content-wrapper">
       <div class="about__img-wrapper">
-
+        <img class="about__img" src="img/img-about.jpg" />
       </div>
       <div class="about__description">
-        <div class="about__title-wrapper">
-          <span class="long-dash"></span>
-          <h2 class="about__title">About us</h2>
-        </div>
-        <div class="about__text-wrapper">
-          <span class="dash"></span>
-          <p class="about__text">
+        <h2 class="about__title">About us</h2>
+        <p class="about__text">
             We are team of professionals in the wood processing
             and creation of wooden furniture of highest class
-          </p>
-        </div>
-        <a class="about__link">Learn more</a>
+        </p>
+        <a class="more-link about__link">Learn more<span class="more-link__icon products__link-icon"></span></a>
       </div>
     </div>
   </section>
 
   <footer class="footer">
     <div class="footer__wrapper">
-
-
       <span class="footer__copyright">
-
+        © 2018 WOODER
       </span>
       <div class="footer__logo">
-        Wooder
+        W<span class="line-through">oo</span>der
       </div>
-
-      <span class="footer__author">Designed by Viacheslav Oilanishyn</span>
+      <span class="footer__author">Designed by <span class="brighter-text">Viacheslav Oilanishyn</span></span>
     </div>
   </footer>
 </body>

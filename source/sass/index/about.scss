@@ -1,0 +1,25 @@
+.about {
+  padding: 20px 15px;
+
+  .about__content-wrapper {
+    @include flex-row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .about__img-wrapper {
+    max-width: 480px;
+  }
+
+  .about__img {
+    max-width: 100%;
+  }
+
+  .about__description {
+    @include flex-column;
+    justify-content: center;
+    align-items: center;
+    max-width: 360px;
+  }
+}

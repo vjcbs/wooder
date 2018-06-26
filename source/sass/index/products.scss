@@ -1,0 +1,130 @@
+.products {
+  padding: 20px 15px;
+
+  .products__list {
+    @include reset-list;
+    position: relative;
+  }
+
+  .products__item {
+    @include flex-row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+
+    &:nth-child(2n) {
+      flex-direction: row-reverse;
+
+      &::after {
+        border-left: none;
+        border-right: 2px solid $woody;
+      }
+    }
+
+    &::after {
+      display: block;
+      content: "";
+      width: 100%;
+      height: 50px;
+      margin: 50px auto;
+      border-left: 2px solid $woody;
+    }
+  }
+
+  .products__description {
+    position: relative;
+    max-width: 500px;
+    margin-bottom: 10px;
+    // @include border;
+  }
+
+  .products__title {
+    position: relative;
+    margin-left: 90px;
+    text-transform: uppercase;
+
+
+    &::before {
+      @include long-dash;
+      top: 50%;
+      left: -90px;
+    }
+  }
+
+  .products__text {
+    position: relative;
+    padding: 0;
+    margin: 0;
+    margin-left: 90px;
+
+    &::before {
+      @include short-dash;
+      top: 10px;
+      left: -40px;
+    }
+  }
+
+  .products__link {
+    margin-left: 90px;
+
+    // &::after {
+    //   @include short-dash;
+    //   border-width: 1px;
+    //   width: 35px;
+    //   left: 0;
+    //   top: 17px;
+    // }
+  }
+
+  // .products__link-icon {
+  //   display: inline-block;
+  //   width: 34px;
+  //   height: 11px;
+  //   margin-left: 5px;
+  //   background: url("../img/ic-arrow.png") no-repeat;
+  //   background-color: #acacac;
+  // }
+
+  .products__number {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    font-weight: 700;
+    // @include border;
+  }
+
+  .products__img {
+    max-width: 100%;
+  }
+
+  .products__info {
+    @include flex-column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .products__info-text {
+    text-align: center;
+  }
+
+  .products__info-list {
+    @include reset-list;
+    @include flex-row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .products__info-item {
+    @include flex-column;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+  }
+
+  .products__info-vid {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    border: 1px solid $woody;
+  }
+}

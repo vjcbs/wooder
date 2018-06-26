@@ -23,3 +23,16 @@ body {
     overflow-x: hidden;
   }
 }
+
+.brighter-text {
+  color: #7d7d7d;
+}
+
+.woody {
+  color: $woody;
+}
+
+.line-through {
+  text-decoration: line-through $woody;
+  // text-decoration-color: $woody; 
+}
