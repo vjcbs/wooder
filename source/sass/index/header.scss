@@ -5,6 +5,8 @@
   padding-bottom: 50px;
   background: url("../img/header-background-2.jpg") no-repeat;
   background-size: cover;
+  min-height: 100vh;
+  user-select: none;
 
   .header__menu-toggle {
     position: absolute;
@@ -16,8 +18,13 @@
   }
 
   .header__logo {
-    @include font($size: 20px, $color: white);
+    @include reset-link;
+    @include font($name: $bold-font, $size: $logo-fsize * 0.6, $color: white);
     text-transform: uppercase;
+
+    &:hover {
+      opacity: 0.8;
+    }
   }
 
   .header__menu {
@@ -31,6 +38,18 @@
 
   .header__nav-list {
     @include reset-list;
+  }
+
+  .header__nav-link {
+    display: block;
+    @include reset-link;
+    @include font($name: $bold-font, $size: $menu-fsize * 0.6, $color: #ffffff);
+    opacity: 0.5;
+    text-transform: uppercase;
+
+    &:hover {
+      transform: scale(1.1);
+    }
   }
 
   .header__info-lang {
@@ -60,19 +79,184 @@
   }
 
   .header__jumbo {
-    @include flex-column;
-    justify-content: center;
-    align-items: center;
-    margin-top: 50px;
+    margin-top: 80px;
     // @include border(red);
   }
 
+  .header__jumbo-wrapper {
+    @include flex-column;
+    justify-content: center;
+    align-items: center;
+  }
+
   .header__title {
-    color: $woody;
+    @include font($name: $bold-font, $size: $header-fsize * 0.5, $color: $woody);
+    margin-bottom: 30px;
+    letter-spacing: 5px;
     text-transform: uppercase;
   }
 
+  .header__link {
+    margin-bottom: 50px;
+  }
+
   .header__scroll {
-    display: none;
+    // display: none;
+    @include flex-column;
+    align-items: center;
+  }
+
+  .header__scroll-icon {
+    display: block;
+    width: 20px;
+    height: 30px;
+    margin-bottom: 10px;
+    background: url("../img/ic-mouse.png") no-repeat;
+  }
+
+  .header__scroll-arrow {
+    display: block;
+    width: 11px;
+    height: 74px;
+    // @include border(red);
+    background: url("../img/ic-arrow-down.png") no-repeat;
+  }
+
+  .header__scroll-caption {
+    @include font($name: $bold-font, $size: 10px, $color: #ffffff);
+    text-transform: uppercase;
+    opacity: 0.1;
+    transform: rotate(90deg) translateX(25px);
+  }
+}
+
+@media (min-width: $tablet) {
+  .header {
+    position: relative;
+    min-height: auto;
+    padding-bottom: 100px;
+
+    .header__nav {
+      display: block;
+    }
+
+    .header__menu-toggle {
+      display: none;
+    }
+
+    .header__menu {
+      // @include border(red);
+      padding: 10px;
+      justify-content: flex-start;
+    }
+
+    .header__logo {
+      margin-left: 33.333%;
+    }
+
+    .header__nav-list {
+      @include flex-row;
+    }
+
+    .header__nav-item {
+      margin-left: 20px;
+    }
+
+    .header__nav-link {
+      font-size: $menu-fsize * 0.8;
+    }
+
+    .header__info-lang {
+      top: 20px;
+      right: 20px;
+    }
+
+    .header__info-btn {
+      margin-right: 10px;
+    }
+
+    .header__jumbo {
+      // @include border(blue);
+      width: auto;
+      margin-top: 100px;
+    }
+
+    .header__jumbo-wrapper {
+      position: relative;
+      justify-content: flex-start;
+      align-items: flex-start;
+      // @include border(gold);
+      width: 33.333%;
+      margin-left: 33.333%;
+
+
+      &::after {
+        display: block;
+        content: "Furniture & decor";
+        position: absolute;
+        top: 275px;
+        right: -200px;
+        font-size: 10px;
+        color: $woody;
+        opacity: 0.2;
+        text-transform: uppercase;
+        transform: rotate(90deg);
+      }
+    }
+
+    .header__title {
+      margin-bottom: 75px;
+      font-size: $header-fsize * 0.8;
+      letter-spacing: 7.5px;
+    }
+
+    .header__link {
+      margin-bottom: 20px;
+    }
+
+    .header__scroll {
+      // @include border(red);
+      align-items: flex-start;
+    }
+
+    .header__scroll-arrow {
+      margin-left: 4px;
+    }
+
+    .header__scroll-caption {
+      transform: rotate(90deg) translateX(25px) translateY(12px);
+    }
+  }
+}
+
+@media (min-width: $desktop) {
+  .header {
+    margin: 0 auto;
+    max-width: 1680px;
+
+    .header__menu {
+      padding: 20px;
+    }
+
+    .header__logo {
+      font-size: $logo-fsize;
+    }
+
+    .header__nav-link {
+      font-size: $menu-fsize;
+    }
+
+    .header__info-lang {
+      top: 30px;
+    }
+
+    .header__jumbo {
+      margin-top: 150px;
+    }
+
+    .header__title {
+      font-size: $header-fsize;
+      letter-spacing: 10px;
+    }
   }
 }

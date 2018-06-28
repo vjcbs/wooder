@@ -1,27 +1,25 @@
 .button {
   @include flex-row;
+  @include font($name: $bold-font, $size: $button-fsize * 0.6, $color: #ffffff);
   justify-content: center;
   align-items: center;
   width: 260px;
   height: 50px;
-  color: #ffffff;
   background-color: transparent;
   border: 2px solid #ffffff;
   text-transform: uppercase;
   cursor: pointer;
+  outline: none;
 
   &:hover {
-    background-color: lightgray;
+    background-color: $woody;
+    border-color: $woody;
     color: white;
   }
 
   &:active {
-    color: rgba(255, 255, 255, 0.3);
+    opacity: 0.6;
   }
-}
-
-.button__caption {
-
 }
 
 .button__icon {

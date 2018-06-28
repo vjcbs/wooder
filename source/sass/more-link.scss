@@ -1,13 +1,23 @@
 .more-link {
   @include reset-link;
   position: relative;
+  text-transform: uppercase;
+  user-select: none;
 
   &::after {
     @include short-dash;
-    border-width: 1px;
+    border-width: 2px;
     width: 35px;
     left: 0;
-    top: 17px;
+    top: 14px;
+  }
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.5;
   }
 }
 
