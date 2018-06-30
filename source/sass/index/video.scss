@@ -110,6 +110,7 @@
     .video__title {
       margin-left: 90px;
       font-size: $title-fsize * 0.8;
+      line-height: 35px;
     }
 
     .video__text {
@@ -128,7 +129,7 @@
   .video {
     margin: 0 auto;
     max-width: 1680px;
-
+    
     .video__wrapper {
       &::before {
         width: 600px;
@@ -139,6 +140,7 @@
 
     .video__title {
       font-size: $title-fsize;
+      line-height: 35px;
     }
 
     .video__text {

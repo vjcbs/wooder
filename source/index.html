@@ -7,8 +7,6 @@
   <title>Wooder</title>
 
   <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,800" />
-  <script defer="" src="js/svgxuse.min.js"></script>
-  <script src="js/picturefill.min.js"></script>
 
   <link rel="stylesheet" href="css/style.css">
 </head>
@@ -16,10 +14,12 @@
   <header class="header">
     <span class="header__menu-toggle hidden"></span>
     <div class="header__menu">
-      <a class="header__logo" href="index.html">
-        W<span class="line-through">oo</span>der
-      </a>
-      <nav class="header__nav">
+      <div class="header__logo-wrapper">
+        <a class="header__logo" href="index.html">
+          W<span class="line-through">oo</span>der
+        </a>
+      </div>
+      <nav class="header__nav nav-menu--no-js">
         <ul class="header__nav-list">
           <li class="header__nav-item">
             <a class="header__nav-link" href="index.html">Home</a>
@@ -167,9 +167,11 @@
       <span class="footer__copyright">
         © 2018 Wooder
       </span>
-      <a class="footer__logo" href="index.html">
-        W<span class="line-through">oo</span>der
-      </a>
+      <div class="footer__logo-wrapper">
+        <a class="footer__logo" href="index.html">
+          W<span class="line-through">oo</span>der
+        </a>
+      </div>
       <div class="footer__author">
         <a class="footer__author-link" href="https://www.behance.net/gallery/33742162/WOODER-Free-PSD-Template" target="_blank">
           Originally designed by <span class="brighter-text">Viacheslav Oilanishyn</span>
@@ -178,5 +180,7 @@
 
     </div>
   </footer>
+
+  <script src="js/script.js"></script>
 </body>
 </html>

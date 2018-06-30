@@ -1,9 +1,6 @@
 .footer {
   position: relative;
   padding: 20px 15px;
-  // background-color: #020202;
-  // z-index: -2;
-
 
   &::before {
     content: "";
@@ -17,7 +14,17 @@
     width: 100%;
     height: 100%;
     filter: brightness(0.1);
-    // @include border(red);
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: -1;
+    background-color: #a0a0a0;
+    width: 100%;
+    height: 100%;
   }
 
   .footer__wrapper {
@@ -36,10 +43,21 @@
     border-width: 3px;
   }
 
+  .footer__logo-wrapper {
+    position: relative;
+
+    &::after {
+      @include pseudo;
+      top: 10px;
+      left: 25px;
+      width: 33px;
+      border-top: 3px solid $woody;
+    }
+  }
+
   .footer__logo {
     @include reset-link;
     @include font($name: $bold-font, $size: $logo-fsize * 0.6, $color: #ffffff);
-    flex-basis: 40%;
     color: #ffffff;
     text-transform: uppercase;
     text-align: center;
@@ -48,16 +66,14 @@
   .footer__author {
     flex-basis: 30%;
     text-align: right;
+    line-height: 10px;
   }
 
   .footer__author-link {
     @include reset-link;
     font-size: 10px;
-    line-height: 14px;
     color: $text-color;
     cursor: pointer;
-    // @include border(white);
-    z-index: 10;
   }
 }
 
@@ -69,13 +85,26 @@
       font-size: 14px;
     }
 
+    .footer__logo-wrapper {
+      &::after {
+        left: 36px;
+        width: 47px;
+      }
+    }
+
     .footer__logo {
       font-size: $logo-fsize * 0.8;
+      letter-spacing: 3px;
+
+
+    }
+
+    .footer__author {
+      line-height: 22px;
     }
 
     .footer__author-link {
       font-size: 14px;
-      line-height: 22px;
     }
   }
 }
@@ -94,8 +123,16 @@
       font-size: 18px;
     }
 
+    .footer__logo-wrapper {
+      &::after {
+        left: 46px;
+        width: 54px;
+      }
+    }
+
     .footer__logo {
       font-size: $logo-fsize;
+      letter-spacing: 5px;
     }
 
     .footer__author-link {

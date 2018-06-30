@@ -10,6 +10,7 @@
   text-transform: uppercase;
   cursor: pointer;
   outline: none;
+  transition: all 350ms;
 
   &:hover {
     background-color: $woody;

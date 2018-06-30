@@ -1,5 +1,6 @@
 .products {
   padding: 20px 15px;
+  overflow-x: hidden;
 
   .products__list {
     @include reset-list;
@@ -92,7 +93,7 @@
   }
 
   .products__img-wrapper {
-    // flex-basis: 50%;
+    position: relative;
   }
 
   .products__img {
@@ -137,23 +138,62 @@
     @include flex-column;
     justify-content: center;
     align-items: center;
+    position: relative;
     margin: 20px;
+
+    &::before {
+      @include pseudo;
+      top: -15px;
+      left: -15px;
+      width: 230px;
+      height: 230px;
+      border-radius: 50%;
+      @include border(#acacac);
+    }
+
+    &:nth-child(1),
+    &:nth-child(3) {
+      .products__info-img {
+        max-width: 150%;
+      }
+    }
+
+    &:nth-child(2) {
+      .products__info-img {
+        max-width: 178%;
+      }
+    }
   }
 
   .products__info-vid {
     @include flex-row;
     justify-content: center;
     align-items: center;
+    position: relative;
     width: 200px;
     height: 200px;
     margin-bottom: 20px;
     border-radius: 50%;
     border: 1px solid $woody;
     overflow: hidden;
-  }
+    cursor: pointer;
 
-  .products__info-img {
-    max-width: 150%;
+    &::after {
+      @include pseudo;
+      top: 50%;
+      left: 50%;
+      transform: translateX(-50%) translateY(-50%);
+      width: 68px;
+      height: 68px;
+      background: url("../img/ic-play-circle.png") no-repeat;
+      transition: all 350ms;
+    }
+
+    &:hover {
+      &::after {
+        transform: translateX(-50%) translateY(-50%) scale(1.1);
+      }
+    }
   }
 
   .products__vid-title {
@@ -221,6 +261,7 @@
 
       &::after {
         top: 50px;
+        transform: translateX(-35%);
       }
     }
 
@@ -243,6 +284,64 @@
     .products__list {
       max-width: 1250px;
       margin: 0 auto;
+    }
+
+    .products__item {
+      &:nth-child(1) {
+        &::before {
+          display: inline-block;
+          content: "F";
+          position: absolute;
+          top: -34px;
+          left: 0;
+          font-size: 290px;
+          font-weight: 700;
+          color: $woody;
+          opacity: 0.07;
+        }
+
+        .products__img-wrapper::after {
+          display: inline-block;
+          content: "Furniture";
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-15%);
+          font-size: 150px;
+          font-weight: 700;
+          color: #d0d0d0;
+          opacity: 0.2;
+          text-transform: uppercase;
+        }
+      }
+
+      &:nth-child(2) {
+        &::before {
+          display: inline-block;
+          content: "D";
+          position: absolute;
+          top: -34px;
+          right: 0;
+          font-size: 290px;
+          font-weight: 700;
+          color: $woody;
+          opacity: 0.07;
+        }
+
+        .products__img-wrapper::after {
+          display: inline-block;
+          content: "Decor";
+          position: absolute;
+          top: 50%;
+          left: 0;
+          transform: translate(-15%);
+          font-size: 150px;
+          font-weight: 700;
+          color: #d0d0d0;
+          opacity: 0.2;
+          text-transform: uppercase;
+        }
+      }
     }
 
     .products__description {
