@@ -1,6 +1,5 @@
 .video {
   position: relative;
-  // min-height: 360px;
   padding: 20px 15px;
 
   &::before {
@@ -16,7 +15,10 @@
     width: 100%;
     height: 100%;
     filter: brightness(0.1);
-    // @include border(red);
+
+    @media (-ms-high-contrast: none), (-ms-high-contrast: active) {
+      background-image: url("../img/img-video-background-filtered.jpg");
+    }
   }
 
   .video__wrapper {
@@ -37,8 +39,7 @@
       width: 400px;
       height: 300px;
       z-index: 10;
-      // @include border(white);
-      background-image: url("../img/ic-play-big2.png");
+      background-image: url("../img/ic-play-big.png");
       background-repeat: no-repeat;
       background-size: 300px;
       background-position: center;
@@ -81,12 +82,11 @@
   }
 
   .video__watch-btn {
-    // margin-left: 90px;
     align-self: center;
     font-size: $button-fsize * 0.6;
 
-    @media (min-width: 468px) {
-      margin-left: 90px;
+    @media (min-width: 446px) {
+      margin-left: 50px;
       align-self: auto;
     }
   }
@@ -94,7 +94,6 @@
 
 @media (min-width: $tablet) {
   .video {
-
     padding: 50px 50px;
 
     &::before {
@@ -120,7 +119,7 @@
     }
 
     .video__watch-btn {
-      // font-size: $button-fsize * 0.8;
+      margin-left: 90px;
     }
   }
 }
@@ -129,7 +128,7 @@
   .video {
     margin: 0 auto;
     max-width: 1680px;
-    
+
     .video__wrapper {
       &::before {
         width: 600px;
@@ -145,10 +144,6 @@
 
     .video__text {
       font-size: $text-fsize;
-    }
-
-    .video__watch-btn {
-      // font-size: $button-fsize;
     }
   }
 }

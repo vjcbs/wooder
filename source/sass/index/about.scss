@@ -14,14 +14,17 @@
 
   .about__img {
     max-width: 100%;
+    width: 100%;
   }
 
   .about__description {
     @include flex-column;
-    // justify-content: flex-start;
-    // align-items: center;
     max-width: 360px;
     margin-left: -40px;
+
+    @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+      width: 100%;
+    }
   }
 
   .about__title {

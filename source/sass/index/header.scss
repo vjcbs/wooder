@@ -1,6 +1,5 @@
 .header {
   position: relative;
-  // background-color: #acacac;
   padding-top: 10px;
   padding-bottom: 50px;
   background: url("../img/header-background-2.jpg") no-repeat;
@@ -60,18 +59,20 @@
 
   .header__nav--slide-down {
     display: block;
-    // background-color: #a0a0a0;
-    filter: brightness(0.5);
     width: 100%;
+    filter: brightness(0.5);
 
     .header__nav-list {
       @include flex-column;
       align-items: center;
       position: absolute;
-      top: 20px;
+      top: 30px;
       left: 50%;
       transform: translateX(-50%);
-      margin-top: 10px;
+
+      @supports (-moz-appearance: none) {
+        top: 0;
+      }
     }
 
     .header__nav-item {
@@ -115,7 +116,6 @@
     position: absolute;
     top: 10px;
     right: 10px;
-    // @include border;
   }
 
   .header__info-btn {
@@ -158,7 +158,6 @@
   }
 
   .header__scroll {
-    // display: none;
     @include flex-column;
     align-items: center;
   }
@@ -175,7 +174,6 @@
     display: block;
     width: 11px;
     height: 74px;
-    // @include border(red);
     background: url("../img/ic-arrow-down.png") no-repeat;
   }
 
@@ -202,7 +200,6 @@
     }
 
     .header__menu {
-      // @include border(red);
       @include flex-row;
       justify-content: center;
       padding: 10px;
@@ -220,7 +217,6 @@
     }
 
     .header__logo {
-      // margin-left: 33.333%;
       font-size: $logo-fsize * 0.8;
       letter-spacing: 3px;
     }
@@ -247,7 +243,6 @@
     }
 
     .header__jumbo {
-      // @include border(blue);
       width: auto;
       margin-top: 75px;
     }
@@ -256,7 +251,6 @@
       position: relative;
       justify-content: flex-start;
       align-items: flex-start;
-      // @include border(gold);
       width: 33.333%;
       margin-left: 33.333%;
 
@@ -286,7 +280,6 @@
     }
 
     .header__scroll {
-      // @include border(red);
       align-items: flex-start;
     }
 
@@ -304,9 +297,9 @@
   .header {
     margin: 0 auto;
     max-width: 1680px;
-
-    background: url("../img/header-background-2.jpg") no-repeat,
-                url("../img/header-background-1.jpg") no-repeat;
+    background-image: url("../img/header-background-2.jpg"),
+                url("../img/header-background-1.jpg");
+    background-repeat: no-repeat, no-repeat;
     background-size: 50%, 75%;
     background-position: right 0 top 0, 0 0;
 
